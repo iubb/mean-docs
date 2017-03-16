@@ -1,0 +1,11 @@
+These are singleton objects that are used to organize and share code across your app.
+They can be injected into controllers, filters, directives. 
+AngularJS provides you three ways : service, factory and provider to create a service.
+
+
+
+factories are functions that return the object.
+while services are constructor functions of the object.
+
+
+
