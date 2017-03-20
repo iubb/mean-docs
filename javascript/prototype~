@@ -1,0 +1,7 @@
+Prototype property is created when a function is declared.
+
+
+Prototype is a property of a Function object.
+
+
+__proto__ is internal property of an object.
