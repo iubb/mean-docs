@@ -1,0 +1,48 @@
+$all
+
+$in
+
+$ne
+
+$eq
+
+$pull  (operator removes all elements in the array that match a specified value)
+
+$pullAll  (operator removes all elements in the array that match any of the specified values)
+
+$each
+
+$skip
+
+$limit
+
+$Push
+
+$slice
+
+$position
+
+$Pop
+
+$inc
+
+$group
+
+$geoWithin - $centerSphere
+
+$project
+
+$addToSet
+
+Population
+
+mapReduse
+
+insertMany -- ordered: false - [modelName].collection.insertMany
+
+mongoose.Types.ObjectId(req.params.id) {at data}
+
+type: mongoose.Schema.Types.ObjectId {in model}
+
+aggregation
+

@@ -1,0 +1,33 @@
+Mongoose is a MONGODB object modeling tool designed to work in asynchronous envirnment.
+
+Here we can define structure of document based on your requirements and can set validations.
+And we can also define statics methods on model and instance methods on documents and hooks called middleware.
+
+
+
+firstname: {
+	type: String,
+	required: 'Firstname is required',
+	maxlength: [20, 'Firstname cannot be more then {MAXLENGTH} characters.']
+},
+
+
+enum: {
+	values: ['A','B', 'C', 'D', 'E', 'F'],
+	message: '{VALUE} is not a valid role for user'
+},
+
+email: {
+	type: String,
+	lowercase: true,
+	trim: true,
+	unique: 'The Email address you have entered already exists.',
+	uniqueCaseInsensitive:true,
+	required: 'E-mail is required',
+	validate: {
+		validator: function(email) {
+			return /^([\w-\.+]+@([\w-]+\.)+[\w-]{2,4})?$/.test(email);
+		},
+		message: '{VALUE} is not a valid email address'
+	}
+},

@@ -1,0 +1,97 @@
+'use strict';
+process.env.NODE_ENV = 'test';
+
+let path 		= require('path'),
+	config 		= require(path.resolve(`./config/env/${process.env.NODE_ENV}`)),
+	User 		= require(path.resolve('./models/User')),
+	chai 		= require('chai'),
+	chaiHttp 	= require('chai-http'),
+	server 		= require(path.resolve('./server')),
+	should 		= chai.should();
+
+
+
+chai.use(chaiHttp);
+
+// user credientials
+let user = {
+	email: 'abc@gmail.com',
+	firstname: 'Yash',
+	lastname: 'Sharma',
+	password: '1234567'
+},
+token = null, id = null;
+
+
+describe('PUT /change_password/:id', function() {
+    it('it should not allow to change password without new password and confirm password', function(done) {
+        chai.request(server)
+            .put(`/change_password/${id}`)
+            .set('Authorization', 'Bearer '+ token)
+            .send({})
+            .end(function(err, res) {
+            	res.should.have.status(200);
+                res.body.should.be.a('object');
+				res.body.should.have.property('errors');
+                res.body.errors.should.have.property('message').eql('New password and confirm password are required');
+                res.body.errors.should.have.property('name').eql('Authentication failed');
+                res.body.errors.should.have.property('success').eql(false);
+                done();
+            });
+
+    });
+
+    it('it should not allow to change password if new password and confirm password is not equal', function(done) {
+        chai.request(server)
+            .put(`/change_password/${id}`)
+            .set('Authorization', 'Bearer '+ token)
+            .send({new_password: "123456", confirm_password: "123"})
+            .end(function(err, res) {
+            	res.should.have.status(200);
+                res.body.should.be.a('object');
+				res.body.should.have.property('errors');
+                res.body.errors.should.have.property('message').eql('New password and confirm password are not same');
+                res.body.errors.should.have.property('name').eql('Authentication failed');
+                res.body.errors.should.have.property('success').eql(false);
+                done();
+            });
+
+    });
+
+	it('it should not allow to change password if _id or old password mismatch', function(done){
+		chai.request(server)
+			.put(`/change_password/${id}`)
+			.set('Authorization', 'Bearer '+ token)
+			.send({new_password: '123456', confirm_password: '123456', current_password: "wrongpassword"})
+			.end(function(err, res){
+				res.should.have.status(200);
+				res.body.should.be.a('object');
+				res.body.should.have.property('errors');
+                res.body.errors.should.have.property('message').eql('Current password did not match.');
+                res.body.errors.should.have.property('success').eql(false);
+				done();
+			});
+	});
+
+
+    it('it should allow to change password successfully', function(done) {
+        let obj = {
+        	new_password: "$123&456",
+            confirm_password: "$123&456",
+            current_password:  user.password
+        };
+        user.password = obj.new_password;
+        chai.request(server)
+            .put(`/change_password/${id}`)
+            .set('Authorization', 'Bearer '+ token)
+            .send(obj)
+            .end(function(err, res) {
+            	res.should.have.status(200);
+                res.body.should.be.a('object');
+				res.body.should.have.property('data');
+                res.body.data.should.have.property('message').eql('Your password has been changed');
+                res.body.data.should.have.property('success').eql(true);
+                done();
+            });
+    });
+});

@@ -5,3 +5,13 @@ Prototype is a property of a Function object.
 
 
 __proto__ is internal property of an object.
+
+
+Object.getPrototypeOf(obj)   Returns the value of obj.__proto__
+
+
+Object.setPrototypeOf(destobj, fromobj);
+
+
+Object.create(obj)
+
