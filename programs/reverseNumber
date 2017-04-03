@@ -1,0 +1,25 @@
+input(123456);
+output(654321);
+
+
+
+function reversing(x){
+
+  y=x%10;
+
+  x=parseInt(x/10);
+
+    document.write(y);
+
+     if(x!=0){
+
+      reversing(x);
+
+     }
+
+}
+
+
+OR
+
+var reversed = num.toString().split('').reverse().join('');
