@@ -1,0 +1,16 @@
+
+var array = ['a', 'b', 'c', 'd', 'a', 'a', 'd', 'c', 'c', 'c'];
+var finalarray = [];
+
+array.forEach(function (key) {
+    console.log(key); 
+    var count = 1;
+
+    if(finalarray[key]){
+        finalarray[key] = finalarray[key]+1;
+    }else{
+        finalarray[key] = count;
+    }
+});
+
+console.log(finalarray); 

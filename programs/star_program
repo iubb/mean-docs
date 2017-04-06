@@ -1,0 +1,62 @@
+<p>Stars</p>
+<script type="text/javascript">
+
+    var i,j;
+    for(i=1; i<=10; i++){
+        for(j=1; j<=i; j++){
+            if(j==1 || (j==i)){
+                document.writeln("*");
+            }else{
+                document.writeln("-");
+            }
+        }
+        document.writeln("<br>");
+    }
+
+    for(i=10; i>=1; i--){
+        for(j=1; j<=i; j++){
+            if(j==1 || (j==i)){
+                document.writeln("*");
+            }else{
+                document.writeln("-");
+            }
+        }
+        document.writeln("<br>");
+    }
+
+    for(i=10; i>=1; i--){
+        for(j=1; j<=10; j++){
+            if(j<i){                
+                document.writeln("_");
+            }else{
+                document.writeln("*");
+            }
+        }
+        document.writeln("<br>");
+    }
+
+var dbTypes = ["A", "B", "C", "D", "E"];
+for(var i = 0; i < 5; i++){
+    for (var j = 0; j  < 5; j++) {
+        (i == 2 || j == 2) ? (j == 2 ? document.writeln(dbTypes[i]) : document.writeln(dbTypes[j])) : document.writeln("X");
+    }
+    document.writeln("</br>");
+}
+
+
+
+var l = 5;
+for(i = 1; i<=l; i++){
+    for(j = 1; j<=i; j++){
+        document.writeln("x");      
+    };
+    document.writeln("<br>");
+    for(k = i; k<=l; k++){
+        document.writeln("*");      
+    };
+    document.writeln("<br>");
+};
+
+</script>
+
+
