@@ -38,6 +38,8 @@ Population
 
 mapReduse
 
+distinct
+
 insertMany -- ordered: false - [modelName].collection.insertMany
 
 mongoose.Types.ObjectId(req.params.id) {at data}
