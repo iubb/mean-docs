@@ -1,0 +1,1 @@
+Hoisting is a javascript mechanish or default behavior where variables and functions declarations are moves to top of their scope before code excution.

@@ -1,0 +1,4 @@
+Object.defineProperty(window, 'a', {
+	value: "1",
+	writable: false
+});
