@@ -1,0 +1,7 @@
+Node.js uses the V8 engine developed by Google for Chrome. V8 compiles and executes JavaScript at lightning speeds because V8 compiles JavaScript into native machine code very quickly.
+
+NodeJS is single-threaded and asynchronous.
+
+Every I/O operation doesn’t block other operations.
+
+It means that you can read files, send mails, query the database, etc… at the same time

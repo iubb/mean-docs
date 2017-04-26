@@ -1,0 +1,1 @@
+Node JS Web Server receives those requests and places them into a Queue. It is known as “Event Queue”.

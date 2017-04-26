@@ -1,0 +1,3 @@
+Node.js uses the V8 engine developed by Google for Chrome. V8 compiles and executes JavaScript at lightning speeds because V8 compiles JavaScript into native machine code very quickly.
+
+

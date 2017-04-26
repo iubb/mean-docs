@@ -1,0 +1,4 @@
+
+					Event Emitter--> Event Queue--> Event Loop--> Event Handlers
+						
+						--NodeJs Event Driven Programming--
