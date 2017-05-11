@@ -1,0 +1,46 @@
+
+
+In Object oriented programing, Inheritance is a feature that represents relationship between different objects/classess. Inheritance allow a class/object to use the properties and methods of another class.
+
+
+
+
+var __extends = function(d, b) {
+
+    d.prototype = b.prototype;
+
+};
+
+var Shape = (function () {
+
+   function Shape(a) {
+      this.Area = a;
+   }
+
+   Shape.prototype.shapeMethod = function(a){
+   		console.log("this is shapeMethod "+ a);
+   }
+
+   return Shape;
+
+}());
+
+var Circle = (function (_super) {
+
+   function Circle() {
+      _super.apply(this, arguments);
+   }
+
+   __extends(Circle, _super);
+	
+   Circle.prototype.disp = function () { 
+      console.log("Area of the circle:  " + this.Area); 
+      this.shapeMethod('runing');
+   }
+
+   return Circle;
+
+}(Shape));
+
+var obj = new Circle(223);
+obj.disp();
