@@ -1,0 +1,4 @@
+
+Middlewares are a function that acts like a bridge that have access to the request object and as well response object. We can transform these object before passing them to next middleware.
+
+We can use these type of functions to excute any code, modify request and response.

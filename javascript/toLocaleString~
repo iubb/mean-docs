@@ -1,0 +1,20 @@
+This method converts a number object into a human readable string.
+
+Convert a Date object to a string, using locale conventions.
+
+Returns a human readable string representing the number using the locale of the environment.
+
+Converts a number to a string by using the current or specified locale.
+
+var number = 123456789;  
+var options1 = { style: "percent" };  
+var options2 = { style: "currency", currency: "INR" };  
+
+document.write(number.toLocaleString("en-US"));  
+// 123,456,789  
+document.write(number.toLocaleString("ja-JP"));  
+// 123,456,789  
+document.write(number.toLocaleString("ar-SA", options1));  
+// ١٢,٣٤٥,٦٧٨,٩٠٠ %  
+document.write(number.toLocaleString("hi-IN", options2));  
+// ₹ 12,34,56,789.00 

@@ -1,0 +1,3 @@
+
+
+If middleware method is binded to app object using app.use method called application level middleware

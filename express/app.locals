@@ -1,0 +1,20 @@
+
+In express, app.locals object has properties that are local variables within the application.
+
+app.locals.title
+// => 'My App'
+
+app.locals.email
+// => 'me@myapp.com'
+
+
+
+we can define application lavel constants in locals.
+
+We can put anything here that we want accessible in every single view.
+
+
+
+/*
+	have a look at res.locals
+*/

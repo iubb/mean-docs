@@ -1,0 +1,8 @@
+
+In express {app.use} used to setup or define a middleware.
+
+const app = express();
+
+The app object is instantiated on creation of the Express server. It has a middleware stack.
+
+Which added these express middleware 'layers' to the middleware stack

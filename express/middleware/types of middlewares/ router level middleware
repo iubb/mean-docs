@@ -1,0 +1,4 @@
+
+Router level middleware are bound to an instance of express.Router().
+
+Load these type of middleware by using router.use() or router.METHOD().

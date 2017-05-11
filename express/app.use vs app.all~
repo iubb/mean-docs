@@ -1,0 +1,41 @@
+
+                     app.all                                                                           app.use
+								.
+
+It attaches to applications`s router.					It attaches to application`s main middleware stack.			.
+
+
+								.
+
+Must be written before HTTP method otherwise it will be not           Anywhere we can write it 
+								.
+executed
+
+								.
+
+app.all get called when a particular URL is requested			we need to set when we want to call it or every time on every request 								
+								
+								.
+
+
+								.
+									
+
+								.
+			
+
+								.
+
+
+								.
+
+
+
+								.
+
+
+								.
+			
+	
+	
+								.
