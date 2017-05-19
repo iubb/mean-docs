@@ -1,0 +1,4 @@
+V8 is an open source JavaScript engine mainly developed for google chrome.
+Before code excution V8 compiles Javascript to native machine code.
+
+it can be integrated into independent projects, for example server-side JavaScript in Node.js,[17] CouchDB
