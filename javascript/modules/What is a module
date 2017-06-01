@@ -1,0 +1,29 @@
+A module is a reusable piece of code that encapsulates implementation details and exposes a public API so it can be easily loaded and used by other code.
+
+
+In JavaScript, modules should ideally allow us to:
+
+abstract code: to delegate functionality to specialised libraries so that we don't have to understand the complexity of their actual implementation
+
+encapsulate code: to hide code inside the module if we don't want the code to be changed
+
+reuse code: to avoid writing the same code over and over again
+
+manage dependencies: to easily change dependencies without rewriting our code
+
+
+
+
+
+Module formats
+A module format is the syntax we can use to define a module.
+
+Before EcmaScript 6 or ES2015, JavaScript did not have an official syntax to define modules. Therefore, smart developers came up with various formats to define modules in JavaScript.
+
+Some of the most widely adapted and well known formats are:
+
+Asynchronous Module Definition (AMD)
+CommonJS
+Universal Module Definition (UMD)
+System.register
+ES6 module format
