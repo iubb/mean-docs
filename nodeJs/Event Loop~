@@ -1,1 +1,5 @@
 Node JS Web Server internally has a Component, known as “Event Loop”.
+
+Event Loop uses Single Thread only. It is main heart of Node JS Platform Processing Model.
+
+

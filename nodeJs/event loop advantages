@@ -1,0 +1,3 @@
+Handling more and more concurrent client’s request is very easy.
+Even though our Node JS Application receives more and more Concurrent client requests, there is no need of creating more and more threads, because of Event loop.
+Node JS application uses less Threads so that it can utilize only less resources or memory

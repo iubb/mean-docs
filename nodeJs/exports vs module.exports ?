@@ -1,0 +1,25 @@
+Both of them are references to the same and empty object at the beggining.
+
+NodeJs does lot of thing to our .js files and one fo the importent is wrapping our files.
+
+we can consider theat export is just a little helper of module.exports.
+
+if you want your module to be of a specific object type use module.exports if you want your module to be a typical module instance use exports
+
+if you overwrite module.exports with exports or anything it will fail.
+
+initially exports and module.exports point at same empty object . we can add properties to this blank object by using exports and module.exports .
+
+if a developer unintentionally or intentionally re-assign module.exports to a different object or different data structure then any properties added to the original module.exports object.
+
+o1 = {}
+o2 = o1
+
+o1.age = 1
+o2.age //1 
+
+o2.age = 2
+o1.age //2 
+
+but o2 = {age:3}
+o1.age //2
