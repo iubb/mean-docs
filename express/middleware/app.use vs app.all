@@ -1,0 +1,6 @@
+app.use() takes only one callback whereas app.all() can take multiple callbacks.
+
+
+app.use() only see whether url starts with specified path where app.all() will match complete path.
+
+next() call inside a middleware invokes the next middleware or route handler depending on whichever is declared next. But next() call inside a route handler invokes the next route handler only. If there is a middleware next then it’s skipped. Therefore middlewares must be declared above all route handlers.

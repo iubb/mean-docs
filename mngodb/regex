@@ -1,0 +1,12 @@
+Start with string
+
+db.collection.find({zip:{'$regex' : '^string', '$options' : 'i'}})
+End with string
+
+db.collection.find({zip:{'$regex' : 'string$', '$options' : 'i'}})
+Contains string
+
+db.collection.find({zip:{'$regex' : 'string', '$options' : 'i'}})
+Doesn't Contains string
+
+db.collection.find({zip:{'$regex' : '^((?!string).)*$', '$options' : 'i'}})

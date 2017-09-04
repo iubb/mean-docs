@@ -1,0 +1,1 @@
+app.all(), app.get(), app.post(), app.delete() and app.put() methods are all used to define routes. A route is used to handle a HTTP request. A route is a combination of a path and callback, which is executed when a request’s path is matches. The callback is called as the route handler

@@ -1,0 +1,1 @@
+db.trackingmodels.find({lat:{$type:1}}).forEach(function(x){db.trackingmodels.update({_id:x._id}, {$set: {lat: x.lat.toString()}})})

@@ -26,7 +26,25 @@ $Pop
 
 $inc
 
+$mod
+
+$subtract
+
+$add
+
 $group
+
+$setIntersection
+
+$out
+
+$split
+
+$elemMatch
+
+$arrayElemAt
+
+$position
 
 $geoWithin - $centerSphere
 
@@ -42,6 +60,9 @@ distinct
 
 $substrBytes
 
+populate
+
+$type
 insertMany -- ordered: false - [modelName].collection.insertMany
 
 mongoose.Types.ObjectId(req.params.id) {at data}
